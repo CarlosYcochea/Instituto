@@ -28,12 +28,12 @@ def crud(request):
     return render(request, 'alumnos/alumnos_list.html', context)
 
 def alumnosAdd(request):
-    if  request.method is not "post":
+    if  request.method !="POST":
         
         generos=Genero.objects.all()
         context={'generos':generos}
         return render(request, 'alumnos/alumnos_add.html', context)
-    else:
+    elif  request.method =="POST":
 
 
 
@@ -79,7 +79,7 @@ def alumnos_del(request,pk):
         context = {'alumnos': alumnos,  'mensaje' : mensaje}
         return render(request, 'alumnos/alumnos_list.html', context)
 
-def alumnos_finEdit(request,pk):
+def alumnos_findEdit(request,pk):
 
     if pk != "":
         alumno=Alumno.objects.get(rut=pk)

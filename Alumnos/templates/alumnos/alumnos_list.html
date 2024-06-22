@@ -40,7 +40,7 @@
                         <td>{{ alumno.nombre}}
                         <td>{{ alumno.apellido_paterno }}
                         <td><a href="{% url 'alumnos_del' pk=alumno.rut %}">Eliminar</a>
-                        <td><a href="{% url 'alumnos_finEdit' pk=alumno.rut %}">Modificar</a>
+                        <td><a href="{% url 'alumnos_findEdit' pk=alumno.rut %}">Modificar</a>
                         
                     </tr>
                 {% endfor %}
