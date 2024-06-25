@@ -7,4 +7,4 @@ class GeneroForm(ModelForm):
     class Meta:
         model = Genero
         fields = ["genero",]
-        labels = {'genero' : 'Género' , }
+        labels = {'genero' : 'genero' , }

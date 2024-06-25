@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .models import Alumno,Genero
+from .models import Alumno , Genero
 
 from .forms import GeneroForm
 
@@ -158,12 +158,12 @@ def generosAdd(request):
 
             form=GeneroForm()
 
-            context={'mensaje':"Ok, datos grabados...","form":form}
+            context={'mensaje':"Ok, datos grabados...",'form':form}
             return render(request,"alumnos/generos_add.html", context)
-        else:
-            form = GeneroForm()
-            context={'form':form}
-            return render(request,'alumnos/generos_add.html', context) 
+    else:
+        form = GeneroForm()
+        context={'form':form}
+        return render(request,'alumnos/generos_add.html', context) 
 
 def generos_del(request, pk):
     mensajes=[]
